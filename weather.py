@@ -15,5 +15,7 @@ def get_current_weather(city='Latina'): #andiamo a dare di default una citta
 
 if __name__ == "__main__": #se esguiamo direttamente, dal file, il codice eseguiremo una versione in console
     city = input("\nEnter the city: \n") 
+    if not city.strip(): #se il valore è una stringa vuota o contiene solo spazi sara un false value
+        city="Latina"
     res = get_current_weather(city)
     pprint(res)
