@@ -30,8 +30,9 @@ def get_weather():
 
 @app.route("/ErrorPage")
 def error():
-    return "an error occourred😥"
-
+    return render_template(
+        "errorPage.html"
+    )
 
 
 if __name__ == "__main__": #se esguiamo direttamente, dal file, il codice eseguiremo una versione in console
